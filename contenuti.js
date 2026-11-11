@@ -3,7 +3,8 @@
    Il nome dello studio si cambia qui, in un punto solo: campo "nome".
    Nei testi {nome} viene sostituito con il nome dello studio.
    Ciò che è tra [parentesi quadre] è un segnaposto: il sito lo evidenzia
-   in giallo finché non viene sostituito con il testo vero.
+   in giallo finché non viene sostituito con il testo vero. Con "mostraSegnaposto": false
+   i segnaposto restano nascosti; con true tornano visibili.
    Le persone sono in ordine alfabetico per cognome.
    Progetti, ordine: Ghersi, Parroccini, Telve, ripetuto. Sulla griglia ogni
    colonna è una persona: prima riga le tre tesi, terza riga i tre progetti su via Clementina.
@@ -14,6 +15,7 @@
 window.SITO = {
   "nome": "Studio X",
   "anno": 2026,
+  "mostraSegnaposto": false,
   "presentazione": {
     "it": "{nome} è uno studio di architettura con sede a Roma, fondato da Alessandro Ghersi, Pietro Parroccini e Giovanni Telve.",
     "en": "{nome} is an architecture practice based in Rome, founded by Alessandro Ghersi, Pietro Parroccini and Giovanni Telve."
@@ -88,7 +90,7 @@ window.SITO = {
         [
           "viste-1",
           1600,
-          1075,
+          1063,
           "Vista a volo d'uccello del porto",
           "Bird's-eye view of the port"
         ],
@@ -127,6 +129,13 @@ window.SITO = {
           "Esploso assonometrico",
           "Exploded axonometric view"
         ]
+      ],
+      "copertinaRitaglio": [
+        "copertina",
+        1200,
+        799,
+        "Vista a volo d'uccello del porto",
+        "Bird's-eye view of the port"
       ],
       "mappa": "https://earth.google.com/web/search/Porto%20di%20Palermo",
       "alta": [
@@ -173,14 +182,14 @@ window.SITO = {
         [
           "viste-piazza",
           1600,
-          1059,
+          1065,
           "Vista dello spazio aperto verso il Colosseo",
           "View of the open space towards the Colosseum"
         ],
         [
           "viste-sezione",
           1600,
-          858,
+          860,
           "Sezione prospettica",
           "Perspective section"
         ],

@@ -9,7 +9,7 @@
   };
   const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const L=x=>x&&typeof x==='object'&&!Array.isArray(x)?x[lingua]:x;
-  const testo=x=>esc(String(L(x)).split('{nome}').join(S.nome)).replace(/\[[^\]]*\]/g,m=>'<mark class="ph">'+m+'</mark>');
+  const testo=x=>esc(String(L(x)).split('{nome}').join(S.nome)).replace(/\s*\[[^\]]*\]/g,m=>S.mostraSegnaposto?'<mark class="ph">'+m+'</mark>':'').trim();
   window.U={
     S,esc,L,testo,
     t:k=>parole[lingua][k],
@@ -19,7 +19,7 @@
     reali:()=>S.progetti.filter(p=>!p.segnaposto),
     img(p,i,sizes,cls){
       const b='img/'+p.cartella+'/'+i[0];
-      return '<img class="'+(cls||'')+'" src="'+b+'.webp" srcset="'+b+'-480.webp 480w, '+b+'.webp '+i[1]+'w" sizes="'+sizes+'" width="'+i[1]+'" height="'+i[2]+'" loading="lazy" decoding="async" alt="'+esc(lingua==='it'?i[3]:i[4])+'">';
+      return '<img class="'+(cls||'')+'" src="'+b+'.webp" srcset="'+b+'-480.webp '+(i[1]>=i[2]?480:Math.round(480*i[1]/i[2]))+'w, '+b+'.webp '+i[1]+'w" sizes="'+sizes+'" width="'+i[1]+'" height="'+i[2]+'" loading="lazy" decoding="async" alt="'+esc(lingua==='it'?i[3]:i[4])+'">';
     },
     cop(p){return p.copertinaRitaglio||p.immagini.find(i=>i[0]===p.copertina)},
     dati(p){const s=this.socio(p.socio);return [['titolo',p.titolo],['luogo',p.luogo],['anno',p.anno],['tipologia',p.tipologia],['stato',p.stato],['socio',s.nome],['contesto',p.contesto],['docenti',p.docenti]]},

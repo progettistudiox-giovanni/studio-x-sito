@@ -30,7 +30,7 @@ header nav a:hover{color:var(--fg)}
 .cap .g{grid-column:1}.cap .a{grid-column:2;grid-row:1;color:var(--grigio)}
 .presenta{padding-block:16px;display:grid;gap:6px}
 .presenta p{max-width:64ch}
-.scheda{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:0}
+.scheda{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);gap:0}
 .col{min-width:0;padding:10px max(16px,env(safe-area-inset-right,0px)) 28px max(16px,env(safe-area-inset-left,0px));border-left:1px solid var(--linea)}
 .col:first-child{border-left:0}
 .col.info{display:flex;flex-direction:column;gap:16px}
@@ -44,7 +44,7 @@ header nav a:hover{color:var(--fg)}
 .desc{max-width:60ch}
 .segue{display:flex;justify-content:space-between;gap:12px;margin-top:auto;padding-top:14px}
 .segue a:last-child{text-align:right}
-@media(min-width:901px){.col{height:calc(100vh - 40px);overflow-y:auto}.scheda{height:calc(100vh - 40px)}}
+@media(min-width:901px){.col{height:calc(100vh - 42px);overflow-y:auto}.scheda{height:calc(100vh - 42px)}}
 .soci{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 16px;padding-block:8px 40px}
 .socio{min-width:0;display:grid;align-content:start;gap:8px}
 .socio h2{font-weight:500}
@@ -64,8 +64,9 @@ footer{display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;co
 main{flex:1}
 .col{scrollbar-width:thin}
 h1{font-weight:500}
-.segue a{max-width:48%}
-@media(min-width:701px){.soci{grid-template-rows:auto auto auto}.socio{display:grid;grid-row:span 3;grid-template-rows:subgrid;gap:8px}}
+.segue a{max-width:48%}.segue a .g{display:block}
+.solo-m img{width:100%}
+@media(min-width:701px){.soci{grid-template-rows:auto auto}.socio{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:8px}}
 #cursore{position:fixed;z-index:20;width:200px;pointer-events:none}
 
 /* ───── Funzioni riprese da giovannitelve.it ───── */

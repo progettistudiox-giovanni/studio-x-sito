@@ -10,9 +10,10 @@ const it=()=>U.lingua()==='it';
 const hasHover=()=>matchMedia('(hover:hover) and (pointer:fine)').matches;
 const quiet=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
 const proj=id=>U.reali().find(x=>x.id===id);
-const parole={it:{immagini:'Immagini',indice:'Indice',cronologia:'Cronologia',disegni:'Disegni',chiudi:'Chiudi',copia:'Copia link',copiato:'Copiato',vista:'Vista dei progetti',mappa:'Apri la posizione'},en:{immagini:'Images',indice:'Index',cronologia:'Timeline',disegni:'Drawings',chiudi:'Close',copia:'Copy link',copiato:'Copied',vista:'Project view',mappa:'Open the location'}};
+const parole={it:{immagini:'Immagini',indice:'Indice',cronologia:'Cronologia',disegni:'Disegni',chiudi:'Chiudi',visore:'Immagini del progetto',copia:'Copia link',copiato:'Copiato',vista:'Vista dei progetti',mappa:'Apri la posizione'},en:{immagini:'Images',indice:'Index',cronologia:'Timeline',disegni:'Drawings',chiudi:'Close',visore:'Project images',copia:'Copy link',copiato:'Copied',vista:'Project view',mappa:'Open the location'}};
 const w=k=>parole[U.lingua()][k];
 let vista='immagini';try{vista=localStorage.getItem('vista')||'immagini'}catch(e){}
+if(vista==='cronologia')vista='immagini';   // vista Cronologia tolta per ora: il codice resta, basta rimetterla nell'elenco delle viste
 let scrollGriglia=0,rottaPrima=null;
 
 /* ── Cursori a segno ── */
@@ -25,22 +26,22 @@ const CUR={prev:segno('prev',20)+', w-resize',next:segno('next',20)+', e-resize'
 (function(){const st=document.documentElement.style;st.setProperty('--cur-arrow',segno('arrow',17)+', default');st.setProperty('--cur-hand',segno('plus',16)+', pointer');st.setProperty('--cur-plus',segno('plus',16)+', zoom-in');st.setProperty('--cur-out',segno('out',15)+', pointer');st.setProperty('--cur-prev',segno('prev',16)+', w-resize');st.setProperty('--cur-next',segno('next',16)+', e-resize')})();
 
 /* ── Pagine ── */
-const testa=r=>'<header class="lato"><a href="#'+(r==='studio'?'':'studio')+'"'+(r==='studio'?' aria-current="page"':'')+'>'+esc(S.nome)+'</a><nav aria-label="Menu"></nav><button class="lingua" id="lng" aria-label="Cambia lingua">'+(it()?'<b>IT</b> / EN':'IT / <b>EN</b>')+'</button></header>';
+const testa=r=>'<header class="lato"><a href="#">'+esc(S.nome)+'</a><nav aria-label="Menu"><a href="#studio"'+(r==='studio'?' aria-current="page"':'')+'>'+t('studio')+'</a></nav><button class="lingua" id="lng" aria-label="Cambia lingua">'+(it()?'<b>IT</b> / EN':'IT / <b>EN</b>')+'</button></header>';
 const piede=()=>'<footer class="lato"><span>© '+S.anno+' '+esc(S.nome)+'. '+t('diritti')+'</span></footer>';
 const disegnoHover=p=>p.immagini.find(i=>!ePhoto(i));
-const griglia=()=>'<div class="griglia lato">'+U.reali().map((p,n)=>{const d=disegnoHover(p);return '<a class="voce" data-g="'+n+'" href="#p-'+p.id+'"><div class="media'+(p.coperturaIntera?' intera':'')+'">'+U.img(p,U.cop(p),'(max-width:900px) 100vw, 33vw')+(d?U.img(p,d,'(max-width:900px) 100vw, 33vw','alt').replace(/alt="[^"]*"/,'alt=""'):'')+'</div><div class="cap"><span>'+testo(p.titolo)+'</span><span class="a">'+p.anno+'</span><span class="g">'+testo(p.luogo)+'</span><span class="g">'+esc(U.socio(p.socio).nome)+'</span></div></a>'}).join('')+'</div>';
+const griglia=()=>'<div class="griglia lato">'+U.reali().map((p,n)=>{const d=disegnoHover(p);return '<a class="voce" data-g="'+n+'" href="#p-'+p.id+'"><div class="media'+(p.coperturaIntera?' intera':'')+'">'+U.img(p,U.cop(p),'(max-width:700px) 100vw, 33vw')+(d?U.img(p,d,'(max-width:700px) 100vw, 33vw','alt').replace(/alt="[^"]*"/,'alt=""'):'')+'</div><div class="cap"><span>'+testo(p.titolo)+'</span><span class="a">'+p.anno+'</span><span class="g">'+testo(p.luogo)+'</span><span class="g">'+esc(U.socio(p.socio).nome)+'</span></div></a>'}).join('')+'</div>';
 const indice=()=>'<div class="indice lato"><div class="riga testa" aria-hidden="true"><span>'+t('titolo')+'</span><span class="nasc">'+t('socio')+'</span><span class="nasc">'+t('tipologia')+'</span><span class="nasc">'+t('luogo')+'</span><span class="a">'+t('anno')+'</span></div>'+U.reali().map(p=>'<a class="riga" data-idx="'+p.id+'" href="#p-'+p.id+'"><span>'+testo(p.titolo)+'</span><span class="nasc g">'+esc(U.socio(p.socio).nome)+'</span><span class="nasc g">'+testo(p.tipologia)+'</span><span class="nasc g">'+testo(p.luogo)+'</span><span class="a g">'+p.anno+'</span></a>').join('')+'</div>';
 const cronologia=()=>{const l=U.reali(),yy=l.map(p=>p.anno),a=Math.max(...yy),b=Math.min(...yy);let o='<div class="crono lato">';for(let y=a;y>=b;y--){const q=l.filter(p=>p.anno===y);o+='<div class="cm-y'+(q.length?'':' vuoto')+'"><span>'+y+'</span><span class="g">'+(q.length||'')+'</span></div>';if(q.length)o+='<div class="cm-t">'+q.map(p=>'<a class="cm-i" title="'+esc(U.L(p.titolo))+', '+esc(U.socio(p.socio).nome)+'" href="#p-'+p.id+'">'+U.img(p,U.cop(p),'96px')+'</a>').join('')+'</div>'}return o+'</div>'};
-const barra=()=>'<div class="barra lato"><span>'+t('progetti')+' <span class="g">'+U.reali().length+'</span></span><div class="viste" role="group" aria-label="'+w('vista')+'">'+['immagini','indice','cronologia'].map(k=>'<button data-v="'+k+'" aria-pressed="'+(vista===k)+'">'+w(k)+'</button>').join('')+'</div></div>';
+const barra=()=>'<div class="barra lato"><span>'+t('progetti')+' <span class="g">'+U.reali().length+'</span></span><div class="viste" role="group" aria-label="'+w('vista')+'">'+['immagini','indice'].map(k=>'<button data-v="'+k+'" aria-pressed="'+(vista===k)+'">'+w(k)+'</button>').join('')+'</div></div>';
 const elenco=()=>vista==='indice'?indice():vista==='cronologia'?cronologia():griglia();
 const home=()=>'<div class="presenta lato"><p>'+testo(S.presentazione)+'</p><p class="g">'+testo(S.avvisoProgetti)+'</p></div>'+barra()+'<div id="elenco">'+elenco()+'</div>';
 const scheda=id=>{const p=proj(id);if(!p)return home();document.title=U.L(p.titolo)+' · '+S.nome;const r=U.reali(),n=r.indexOf(p),pr=r[(n-1+r.length)%r.length],su=r[(n+1)%r.length];
   const F=p.immagini.filter(ePhoto),D=p.immagini.filter(i=>!ePhoto(i));
-  const fig=i=>'<figure class="it" tabindex="0" role="button" aria-label="'+esc(it()?i[3]:i[4])+'" data-i="'+p.immagini.indexOf(i)+'">'+U.img(p,i,'(max-width:900px) 100vw, 33vw')+'</figure>';
+  const fig=i=>'<figure class="it" tabindex="0" role="button" aria-label="'+esc(it()?i[3]:i[4])+'" data-i="'+p.immagini.indexOf(i)+'">'+U.img(p,i,'(max-width:900px) 100vw, '+(ePhoto(i)?'43vw':'29vw'))+'</figure>';
   const col=(k,l)=>'<div class="col'+(l===F?' foto'+(l.length<2?' unica':''):'')+'"><div class="tit"><span>'+k+' <span class="g">'+l.length+'</span></span></div>'+l.map(fig).join('')+'</div>';
   const riga=d=>{let v=testo(d[1]);if(d[0]==='luogo'&&p.mappa)v='<a class="mappa" href="'+esc(p.mappa)+'" target="_blank" rel="noopener" title="'+w('mappa')+'">'+v+'</a>';return '<div class="fila"><dt>'+t(d[0])+'</dt><dd>'+v+'</dd></div>'};
-  return '<article class="scheda" data-p="'+p.id+'"><div class="col info"><div class="tit"><a href="#">← '+t('tuttiProgetti')+'</a>'+'</div><h1>'+testo(p.titolo)+'</h1><div class="solo-m">'+U.img(p,p.immagini.find(i=>i[0]===p.copertina),'100vw')+'</div><dl class="dati">'+U.dati(p).slice(1).map(riga).join('')+'</dl><p class="desc">'+testo(p.descrizione)+'</p><div class="segue"><a class="pv" href="#p-'+pr.id+'">← '+testo(pr.titolo)+'</a><a class="nx" href="#p-'+su.id+'">'+testo(su.titolo)+' →</a></div></div>'+col(w('immagini'),F)+col(w('disegni'),D)+'</article>'};
-const studio=()=>'<div class="presenta lato"><p>'+testo(S.presentazione)+'</p><p>'+testo(S.approccio)+'</p></div><div class="soci lato">'+S.soci.map(s=>'<section class="socio"><h2>'+esc(s.nome)+'</h2><p>'+testo(s.bio)+'</p><p class="lav">'+U.reali().filter(p=>p.socio===s.id).map(p=>'<a data-prev="'+p.id+'" href="#p-'+p.id+'">'+testo(p.titolo)+'</a>').join('<br>')+'</p></section>').join('')+'</div>';
+  return '<article class="scheda" data-p="'+p.id+'"><div class="col info"><div class="tit"><a href="#">← '+t('tuttiProgetti')+'</a>'+'</div><h1>'+testo(p.titolo)+'</h1>'+(c=>'<figure class="it solo-m" tabindex="0" role="button" aria-label="'+esc(it()?c[3]:c[4])+'" data-i="'+p.immagini.indexOf(c)+'">'+U.img(p,c,'100vw')+'</figure>')(p.immagini.find(i=>i[0]===p.copertina))+'<dl class="dati">'+U.dati(p).slice(1).map(riga).join('')+'</dl><p class="desc">'+testo(p.descrizione)+'</p><div class="segue"><a class="pv" href="#p-'+pr.id+'">← '+testo(pr.titolo)+'<span class="g">'+esc(U.socio(pr.socio).nome)+'</span></a><a class="nx" href="#p-'+su.id+'">'+testo(su.titolo)+' →<span class="g">'+esc(U.socio(su.socio).nome)+'</span></a></div></div>'+col(w('immagini'),F)+col(w('disegni'),D)+'</article>'};
+const studio=()=>'<div class="presenta lato"><p>'+testo(S.presentazione)+'</p>'+(testo(S.approccio)?'<p>'+testo(S.approccio)+'</p>':'')+'</div><div class="soci lato">'+S.soci.map(s=>'<section class="socio"><h2>'+esc(s.nome)+'</h2><p>'+testo(s.bio)+'</p></section>').join('')+'</div>';
 
 /* ── Anteprima che segue il cursore ── */
 const cur=document.createElement('div');cur.id='cursore';cur.hidden=true;document.body.appendChild(cur);
@@ -83,7 +84,7 @@ function vai(d){
   if(n>=0&&n<lista.length)pos=n;
   else{const r=U.reali(),k=r.indexOf(progetto),q=r[(k+(n<0?r.length-1:1))%r.length];progetto=q;lista=listaProgetto(q);pos=n<0?lista.length-1:0}
   cambiato=true;disegna();location.replace(hashImg())}
-function apri(l,i,da,p){progetto=p||null;cambiato=false;inCronologia=false;lista=l;pos=i;cur.hidden=true;disegna();aperta=true;lb.classList.add('open');document.body.classList.add('lb-open');lb.setAttribute('aria-label',w('chiudi'));$('lb-x').setAttribute('aria-label',w('chiudi'));
+function apri(l,i,da,p){progetto=p||null;cambiato=false;inCronologia=false;lista=l;pos=i;cur.hidden=true;disegna();aperta=true;lb.classList.add('open');document.body.classList.add('lb-open');lb.setAttribute('aria-label',w('visore'));$('lb-x').setAttribute('aria-label',w('chiudi'));
   fuoco=document.activeElement&&document.activeElement!==document.body?document.activeElement:null;lb.focus({preventScroll:true});
   const th=da&&da.querySelector('img');if(!th||quiet())return;const from=th.getBoundingClientRect();
   const cresci=()=>{const to=lbI.getBoundingClientRect();if(!to.width||!from.width)return;const k=from.width/to.width;lbI.style.transition='none';lbI.style.transform='translate('+(from.left+from.width/2-(to.left+to.width/2))+'px,'+(from.top+from.height/2-(to.top+to.height/2))+'px) scale('+k+')';lbI.getBoundingClientRect();lbI.style.transition='transform .24s cubic-bezier(.2,.8,.2,1)';lbI.style.transform='';setTimeout(()=>{lbI.style.transition=''},260)};
@@ -121,7 +122,7 @@ document.addEventListener('keydown',e=>{const pl=!e.altKey&&!e.metaKey&&!e.ctrlK
   if(sc&&e.key==='Escape'){location.hash='';return}
   if(sc&&pl&&e.key==='ArrowLeft'){e.preventDefault();location.hash=sc.querySelector('.pv').getAttribute('href').slice(1)}
   if(sc&&pl&&e.key==='ArrowRight'){e.preventDefault();location.hash=sc.querySelector('.nx').getAttribute('href').slice(1)}
-  if(a&&a.dataset&&a.dataset.v&&(e.key==='ArrowLeft'||e.key==='ArrowRight')){const v=['immagini','indice','cronologia'],k=(v.indexOf(a.dataset.v)+(e.key==='ArrowRight'?1:2))%3;e.preventDefault();setVista(v[k]);const b=app.querySelector('[data-v="'+v[k]+'"]');b&&b.focus()}
+  if(a&&a.dataset&&a.dataset.v&&(e.key==='ArrowLeft'||e.key==='ArrowRight')){const v=['immagini','indice'],k=(v.indexOf(a.dataset.v)+1)%2;e.preventDefault();setVista(v[k]);const b=app.querySelector('[data-v="'+v[k]+'"]');b&&b.focus()}
 });
 
 /* ── Telefono: tenendo il dito su un progetto si vede il disegno; sull'indice l'anteprima sopra il dito ── */
