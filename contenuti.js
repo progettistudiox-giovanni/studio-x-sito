@@ -5,7 +5,8 @@
    Ciò che è tra [parentesi quadre] è un segnaposto: il sito lo evidenzia
    in giallo finché non viene sostituito con il testo vero. Con "mostraSegnaposto": false
    i segnaposto restano nascosti; con true tornano visibili.
-   Le persone sono in ordine alfabetico per cognome.
+   Le persone sono in ordine alfabetico per cognome. "cv": sezioni brevi (Formazione, Esperienze),
+   ogni voce con "anni" e "testo"; una voce che è solo segnaposto resta nascosta.
    Progetti, ordine: Ghersi, Parroccini, Telve, ripetuto. Sulla griglia ogni
    colonna è una persona: prima riga le tre tesi, terza riga i tre progetti su via Clementina.
    alta: ["nome", ...] elenca le immagini con il file nome-alta.webp, caricato quando si ingrandisce.
@@ -35,15 +36,99 @@ window.SITO = {
       "bio": {
         "it": "Si è avvicinato all'architettura attraverso la scenografia artistica, da cui viene il suo interesse per le sequenze spaziali e i giochi di luce, a cui affianca l'attenzione per gli aspetti costruttivi. Si è laureato con lode alla Sapienza Università di Roma, con uno scambio all'Universitat Politècnica de València, ed è abilitato alla professione.",
         "en": "He came to architecture through artistic set design, the source of his interest in spatial sequences and plays of light, alongside close attention to construction. He graduated with honours from Sapienza Università di Roma, with an exchange at Universitat Politècnica de València, and is qualified to practise."
-      }
+      },
+      "cv": [
+        {
+          "titolo": {
+            "it": "Formazione",
+            "en": "Education"
+          },
+          "voci": [
+            {
+              "anni": "[anni]",
+              "testo": {
+                "it": "[CV di Alessandro Ghersi da fornire]",
+                "en": "[Alessandro Ghersi's CV to be supplied]"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "parroccini",
       "nome": "Pietro Parroccini",
       "bio": {
-        "it": "Ha frequentato un laboratorio di progettazione a Lisbona e nel 2023 ha contribuito con disegni e un modello fisico alla mostra Habitar Lisboa, con Appleton & Domingos Arquitectos. Laureato con lode alla Sapienza Università di Roma, è abilitato alla professione. [resto del CV di Pietro Parroccini]",
-        "en": "He attended a design studio in Lisbon and in 2023 contributed drawings and a physical model to the exhibition Habitar Lisboa, with Appleton & Domingos Arquitectos. A graduate with honours of Sapienza Università di Roma, he is qualified to practise. [rest of Pietro Parroccini's CV]"
-      }
+        "it": "Si interessa ai processi di progetto, dalle nuove costruzioni alla riconversione di edifici dismessi attraverso il riuso adattivo, dalla composizione al dettaglio costruttivo, e lavora tra disegno a mano, modelli fisici e modellazione tridimensionale. Si è laureato con lode alla Sapienza Università di Roma, con un Erasmus all'Instituto Superior Técnico di Lisbona, ed è abilitato alla professione.",
+        "en": "He is interested in design processes, from new construction to the conversion of disused buildings through adaptive reuse, and from composition to construction detail, working across hand drawing, physical models and three-dimensional modelling. He graduated with honours from Sapienza Università di Roma, with an Erasmus at Instituto Superior Técnico in Lisbon, and is qualified to practise."
+      },
+      "cv": [
+        {
+          "titolo": {
+            "it": "Formazione",
+            "en": "Education"
+          },
+          "voci": [
+            {
+              "anni": "2020–2025",
+              "testo": {
+                "it": "Laurea magistrale in Architettura, Sapienza Università di Roma",
+                "en": "Master's degree in Architecture, Sapienza Università di Roma"
+              }
+            },
+            {
+              "anni": "2022–2023",
+              "testo": {
+                "it": "Erasmus, Instituto Superior Técnico, Lisbona",
+                "en": "Erasmus, Instituto Superior Técnico, Lisbon"
+              }
+            }
+          ]
+        },
+        {
+          "titolo": {
+            "it": "Esperienze",
+            "en": "Experience"
+          },
+          "voci": [
+            {
+              "anni": "2025–2026",
+              "testo": {
+                "it": "Architetto, Forconia Engineering, Roma",
+                "en": "Architect, Forconia Engineering, Rome"
+              }
+            },
+            {
+              "anni": "2024–2025",
+              "testo": {
+                "it": "Assistente ai corsi di progettazione architettonica, Sapienza Università di Roma",
+                "en": "Teaching assistant, architectural design courses, Sapienza Università di Roma"
+              }
+            },
+            {
+              "anni": "2024",
+              "testo": {
+                "it": "Borsa di progettazione, Academy of Architectural Culture, Amburgo",
+                "en": "Design scholarship, Academy of Architectural Culture, Hamburg"
+              }
+            },
+            {
+              "anni": "2024",
+              "testo": {
+                "it": "Tirocinio, Leonardo Palla Architetto, Roma",
+                "en": "Internship, Leonardo Palla Architetto, Rome"
+              }
+            },
+            {
+              "anni": "2023",
+              "testo": {
+                "it": "Tirocinio, Appleton & Domingos Arquitectos, Lisbona",
+                "en": "Internship, Appleton & Domingos Arquitectos, Lisbon"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "telve",
@@ -51,7 +136,81 @@ window.SITO = {
       "bio": {
         "it": "Si interessa al modo in cui gli spazi urbani definiscono le relazioni sociali e dedica attenzione alla rappresentazione grafica e visuale del progetto. Ha studiato alla Sapienza Università di Roma, dove si è laureato con lode, alla TU Darmstadt nel 2022 e alla TU München nel 2025. È abilitato alla professione.",
         "en": "He is interested in how urban spaces shape social relationships and pays close attention to the graphic and visual representation of a project. He studied at Sapienza Università di Roma, where he graduated with honours, at TU Darmstadt in 2022 and at TU München in 2025. He is qualified to practise."
-      }
+      },
+      "cv": [
+        {
+          "titolo": {
+            "it": "Formazione",
+            "en": "Education"
+          },
+          "voci": [
+            {
+              "anni": "2019–2025",
+              "testo": {
+                "it": "Laurea magistrale in Architettura, Sapienza Università di Roma",
+                "en": "Master's degree in Architecture, Sapienza Università di Roma"
+              }
+            },
+            {
+              "anni": "2023–2025",
+              "testo": {
+                "it": "Erasmus e ricerca di tesi, TU München",
+                "en": "Erasmus and thesis research, TU München"
+              }
+            },
+            {
+              "anni": "2021–2022",
+              "testo": {
+                "it": "Erasmus, TU Darmstadt",
+                "en": "Erasmus, TU Darmstadt"
+              }
+            }
+          ]
+        },
+        {
+          "titolo": {
+            "it": "Esperienze",
+            "en": "Experience"
+          },
+          "voci": [
+            {
+              "anni": "2024–2025",
+              "testo": {
+                "it": "Tirocinio, City Meta Lab, Roma e Dubai",
+                "en": "Internship, City Meta Lab, Rome and Dubai"
+              }
+            },
+            {
+              "anni": "2024",
+              "testo": {
+                "it": "Tutor di workshop, EASA, Benidorm",
+                "en": "Workshop tutor, EASA, Benidorm"
+              }
+            },
+            {
+              "anni": "2023",
+              "testo": {
+                "it": "Tirocinio per il concorso Europan 17, SDB architettura, Roma",
+                "en": "Internship for the Europan 17 competition, SDB architettura, Rome"
+              }
+            },
+            {
+              "anni": "2023",
+              "testo": {
+                "it": "Mostra personale di disegno Taccuini, Sinestetica Expo, Roma",
+                "en": "Solo drawing exhibition Taccuini, Sinestetica Expo, Rome"
+              }
+            },
+            {
+              "anni": "2022–2023",
+              "testo": {
+                "it": "Graphic designer, E23 Startup, Roma",
+                "en": "Graphic designer, E23 Startup, Rome"
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "progetti": [

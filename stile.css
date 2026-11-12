@@ -49,6 +49,11 @@ header nav a:hover{color:var(--fg)}
 .socio{min-width:0;display:grid;align-content:start;gap:8px}
 .socio h2{font-weight:500}
 .socio p{max-width:60ch}
+.cv{display:grid;align-content:start;gap:6px;padding-top:10px;border-top:1px solid var(--linea)}
+.cv:empty{border-top:0;padding-top:0}
+.cv h3{font-weight:500;color:var(--grigio)}
+.cv h3+.dati{margin-bottom:10px}
+.cv .fila{grid-template-columns:6em minmax(0,1fr)}
 .lav{padding-top:6px;border-top:1px solid var(--linea)}
 footer{display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;color:var(--grigio);padding-block:10px 16px;border-top:1px solid var(--linea)}
 @media(max-width:900px){
@@ -66,7 +71,7 @@ main{flex:1}
 h1{font-weight:500}
 .segue a{max-width:48%}.segue a .g{display:block}
 .solo-m img{width:100%}
-@media(min-width:701px){.soci{grid-template-rows:auto auto}.socio{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:8px}}
+@media(min-width:701px){.soci{grid-template-rows:auto auto auto}.socio{display:grid;grid-row:span 3;grid-template-rows:subgrid;gap:8px}}
 #cursore{position:fixed;z-index:20;width:200px;pointer-events:none}
 
 /* ───── Funzioni riprese da giovannitelve.it ───── */
