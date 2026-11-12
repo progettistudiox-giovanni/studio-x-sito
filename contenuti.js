@@ -6,7 +6,7 @@
    in giallo finché non viene sostituito con il testo vero. Con "mostraSegnaposto": false
    i segnaposto restano nascosti; con true tornano visibili.
    Le persone sono in ordine alfabetico per cognome. "cv": sezioni brevi (Formazione, Esperienze),
-   ogni voce con "anni" e "testo"; una voce che è solo segnaposto resta nascosta.
+   ogni voce con "anni", "testo" (ruolo) e "dove" (ente e città, su una riga sotto); una voce che è solo segnaposto resta nascosta.
    Progetti, ordine: Ghersi, Parroccini, Telve, ripetuto. Sulla griglia ogni
    colonna è una persona: prima riga le tre tesi, terza riga i tre progetti su via Clementina.
    alta: ["nome", ...] elenca le immagini con il file nome-alta.webp, caricato quando si ingrandisce.
@@ -47,15 +47,23 @@ window.SITO = {
             {
               "anni": "2019–2025",
               "testo": {
-                "it": "Laurea magistrale con lode in Architettura, Sapienza Università di Roma",
-                "en": "Master's degree with honours in Architecture, Sapienza Università di Roma"
+                "it": "Laurea magistrale con lode in Architettura",
+                "en": "Master's degree with honours in Architecture"
+              },
+              "dove": {
+                "it": "Sapienza Università di Roma",
+                "en": "Sapienza Università di Roma"
               }
             },
             {
               "anni": "2022–2023",
               "testo": {
-                "it": "Erasmus, Universitat Politècnica de València",
-                "en": "Erasmus, Universitat Politècnica de València"
+                "it": "Erasmus",
+                "en": "Erasmus"
+              },
+              "dove": {
+                "it": "Universitat Politècnica de València",
+                "en": "Universitat Politècnica de València"
               }
             }
           ]
@@ -72,15 +80,45 @@ window.SITO = {
                 "en": "since 2026"
               },
               "testo": {
-                "it": "V.A.M.S. Ingegneria Srl",
-                "en": "V.A.M.S. Ingegneria Srl"
+                "it": "Architetto",
+                "en": "Architect"
+              },
+              "dove": {
+                "it": "V.A.M.S. Ingegneria Srl, Roma",
+                "en": "V.A.M.S. Ingegneria Srl, Rome"
               }
             },
             {
               "anni": "2025–2026",
               "testo": {
-                "it": "Architetto, Forconia Engineering, Roma",
-                "en": "Architect, Forconia Engineering, Rome"
+                "it": "Architetto",
+                "en": "Architect"
+              },
+              "dove": {
+                "it": "Forconia Engineering, Roma",
+                "en": "Forconia Engineering, Rome"
+              }
+            },
+            {
+              "anni": "2025",
+              "testo": {
+                "it": "Partecipante al workshop MEDS",
+                "en": "Participant, MEDS workshop"
+              },
+              "dove": {
+                "it": "",
+                "en": ""
+              }
+            },
+            {
+              "anni": "2024",
+              "testo": {
+                "it": "Borsa di progettazione",
+                "en": "Design scholarship"
+              },
+              "dove": {
+                "it": "Academy of Architectural Culture, Amburgo",
+                "en": "Academy of Architectural Culture, Hamburg"
               }
             }
           ]
@@ -104,15 +142,23 @@ window.SITO = {
             {
               "anni": "2019–2025",
               "testo": {
-                "it": "Laurea magistrale con lode in Architettura, Sapienza Università di Roma",
-                "en": "Master's degree with honours in Architecture, Sapienza Università di Roma"
+                "it": "Laurea magistrale con lode in Architettura",
+                "en": "Master's degree with honours in Architecture"
+              },
+              "dove": {
+                "it": "Sapienza Università di Roma",
+                "en": "Sapienza Università di Roma"
               }
             },
             {
               "anni": "2022–2023",
               "testo": {
-                "it": "Erasmus, Instituto Superior Técnico, Lisbona",
-                "en": "Erasmus, Instituto Superior Técnico, Lisbon"
+                "it": "Erasmus",
+                "en": "Erasmus"
+              },
+              "dove": {
+                "it": "Instituto Superior Técnico, Lisbona",
+                "en": "Instituto Superior Técnico, Lisbon"
               }
             }
           ]
@@ -126,36 +172,56 @@ window.SITO = {
             {
               "anni": "2025–2026",
               "testo": {
-                "it": "Architetto, Forconia Engineering, Roma",
-                "en": "Architect, Forconia Engineering, Rome"
+                "it": "Architetto",
+                "en": "Architect"
+              },
+              "dove": {
+                "it": "Forconia Engineering, Roma",
+                "en": "Forconia Engineering, Rome"
               }
             },
             {
               "anni": "2024–2025",
               "testo": {
-                "it": "Assistente ai corsi di progettazione architettonica, Sapienza Università di Roma",
-                "en": "Teaching assistant, architectural design courses, Sapienza Università di Roma"
+                "it": "Assistente ai corsi di progettazione",
+                "en": "Teaching assistant, design courses"
+              },
+              "dove": {
+                "it": "Sapienza Università di Roma",
+                "en": "Sapienza Università di Roma"
               }
             },
             {
               "anni": "2024",
               "testo": {
-                "it": "Borsa di progettazione, Academy of Architectural Culture, Amburgo",
-                "en": "Design scholarship, Academy of Architectural Culture, Hamburg"
+                "it": "Borsa di progettazione",
+                "en": "Design scholarship"
+              },
+              "dove": {
+                "it": "Academy of Architectural Culture, Amburgo",
+                "en": "Academy of Architectural Culture, Hamburg"
               }
             },
             {
               "anni": "2024",
               "testo": {
-                "it": "Tirocinio, Leonardo Palla Architetto, Roma",
-                "en": "Internship, Leonardo Palla Architetto, Rome"
+                "it": "Tirocinio",
+                "en": "Internship"
+              },
+              "dove": {
+                "it": "Leonardo Palla Architetto, Roma",
+                "en": "Leonardo Palla Architetto, Rome"
               }
             },
             {
               "anni": "2023",
               "testo": {
-                "it": "Tirocinio, Appleton & Domingos Arquitectos, Lisbona",
-                "en": "Internship, Appleton & Domingos Arquitectos, Lisbon"
+                "it": "Tirocinio",
+                "en": "Internship"
+              },
+              "dove": {
+                "it": "Appleton & Domingos Arquitectos, Lisbona",
+                "en": "Appleton & Domingos Arquitectos, Lisbon"
               }
             }
           ]
@@ -179,22 +245,34 @@ window.SITO = {
             {
               "anni": "2019–2025",
               "testo": {
-                "it": "Laurea magistrale con lode in Architettura, Sapienza Università di Roma",
-                "en": "Master's degree with honours in Architecture, Sapienza Università di Roma"
+                "it": "Laurea magistrale con lode in Architettura",
+                "en": "Master's degree with honours in Architecture"
+              },
+              "dove": {
+                "it": "Sapienza Università di Roma",
+                "en": "Sapienza Università di Roma"
               }
             },
             {
               "anni": "2023–2025",
               "testo": {
-                "it": "Erasmus e ricerca di tesi, TU München",
-                "en": "Erasmus and thesis research, TU München"
+                "it": "Erasmus e ricerca di tesi",
+                "en": "Erasmus and thesis research"
+              },
+              "dove": {
+                "it": "TU München",
+                "en": "TU München"
               }
             },
             {
               "anni": "2021–2022",
               "testo": {
-                "it": "Erasmus, TU Darmstadt",
-                "en": "Erasmus, TU Darmstadt"
+                "it": "Erasmus",
+                "en": "Erasmus"
+              },
+              "dove": {
+                "it": "TU Darmstadt",
+                "en": "TU Darmstadt"
               }
             }
           ]
@@ -208,36 +286,56 @@ window.SITO = {
             {
               "anni": "2024–2025",
               "testo": {
-                "it": "Tirocinio, City Meta Lab, Roma",
-                "en": "Internship, City Meta Lab, Rome"
+                "it": "Tirocinio",
+                "en": "Internship"
+              },
+              "dove": {
+                "it": "City Meta Lab, Roma",
+                "en": "City Meta Lab, Rome"
               }
             },
             {
               "anni": "2024",
               "testo": {
-                "it": "Tutor di workshop, EASA, Benidorm",
-                "en": "Workshop tutor, EASA, Benidorm"
+                "it": "Tutor di workshop",
+                "en": "Workshop tutor"
+              },
+              "dove": {
+                "it": "EASA, Benidorm",
+                "en": "EASA, Benidorm"
               }
             },
             {
               "anni": "2023",
               "testo": {
-                "it": "Tirocinio per il concorso Europan 17, SDB architettura, Roma",
-                "en": "Internship for the Europan 17 competition, SDB architettura, Rome"
+                "it": "Tirocinio, concorso Europan 17",
+                "en": "Internship, Europan 17 competition"
+              },
+              "dove": {
+                "it": "SDB architettura, Roma",
+                "en": "SDB architettura, Rome"
               }
             },
             {
               "anni": "2023",
               "testo": {
-                "it": "Mostra personale di disegno Taccuini, Sinestetica Expo, Roma",
-                "en": "Solo drawing exhibition Taccuini, Sinestetica Expo, Rome"
+                "it": "Mostra personale di disegno Taccuini",
+                "en": "Solo drawing exhibition Taccuini"
+              },
+              "dove": {
+                "it": "Sinestetica Expo, Roma",
+                "en": "Sinestetica Expo, Rome"
               }
             },
             {
               "anni": "2022–2023",
               "testo": {
-                "it": "Graphic designer, E23 Startup, Roma",
-                "en": "Graphic designer, E23 Startup, Rome"
+                "it": "Graphic designer",
+                "en": "Graphic designer"
+              },
+              "dove": {
+                "it": "E23 Startup, Roma",
+                "en": "E23 Startup, Rome"
               }
             }
           ]
