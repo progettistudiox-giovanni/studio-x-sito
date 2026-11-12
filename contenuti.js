@@ -283,6 +283,20 @@ window.SITO = {
             "en": "Experience"
           },
           "voci": [
+              {
+                "anni": {
+                  "it": "dal 2026",
+                  "en": "since 2026"
+                },
+                "testo": {
+                  "it": "Architetto",
+                  "en": "Architect"
+                },
+                "dove": {
+                  "it": "Supervoid, Roma",
+                  "en": "Supervoid, Rome"
+                }
+              },
             {
               "anni": "2024–2025",
               "testo": {
