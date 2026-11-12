@@ -45,10 +45,42 @@ window.SITO = {
           },
           "voci": [
             {
-              "anni": "[anni]",
+              "anni": "2019–2025",
               "testo": {
-                "it": "[CV di Alessandro Ghersi da fornire]",
-                "en": "[Alessandro Ghersi's CV to be supplied]"
+                "it": "Laurea magistrale con lode in Architettura, Sapienza Università di Roma",
+                "en": "Master's degree with honours in Architecture, Sapienza Università di Roma"
+              }
+            },
+            {
+              "anni": "2022–2023",
+              "testo": {
+                "it": "Erasmus, Universitat Politècnica de València",
+                "en": "Erasmus, Universitat Politècnica de València"
+              }
+            }
+          ]
+        },
+        {
+          "titolo": {
+            "it": "Esperienze",
+            "en": "Experience"
+          },
+          "voci": [
+            {
+              "anni": {
+                "it": "dal 2026",
+                "en": "since 2026"
+              },
+              "testo": {
+                "it": "V.A.M.S. Ingegneria Srl",
+                "en": "V.A.M.S. Ingegneria Srl"
+              }
+            },
+            {
+              "anni": "2025–2026",
+              "testo": {
+                "it": "Architetto, Forconia Engineering, Roma",
+                "en": "Architect, Forconia Engineering, Rome"
               }
             }
           ]
@@ -70,10 +102,10 @@ window.SITO = {
           },
           "voci": [
             {
-              "anni": "2020–2025",
+              "anni": "2019–2025",
               "testo": {
-                "it": "Laurea magistrale in Architettura, Sapienza Università di Roma",
-                "en": "Master's degree in Architecture, Sapienza Università di Roma"
+                "it": "Laurea magistrale con lode in Architettura, Sapienza Università di Roma",
+                "en": "Master's degree with honours in Architecture, Sapienza Università di Roma"
               }
             },
             {
@@ -147,8 +179,8 @@ window.SITO = {
             {
               "anni": "2019–2025",
               "testo": {
-                "it": "Laurea magistrale in Architettura, Sapienza Università di Roma",
-                "en": "Master's degree in Architecture, Sapienza Università di Roma"
+                "it": "Laurea magistrale con lode in Architettura, Sapienza Università di Roma",
+                "en": "Master's degree with honours in Architecture, Sapienza Università di Roma"
               }
             },
             {
@@ -176,8 +208,8 @@ window.SITO = {
             {
               "anni": "2024–2025",
               "testo": {
-                "it": "Tirocinio, City Meta Lab, Roma e Dubai",
-                "en": "Internship, City Meta Lab, Rome and Dubai"
+                "it": "Tirocinio, City Meta Lab, Roma",
+                "en": "Internship, City Meta Lab, Rome"
               }
             },
             {
