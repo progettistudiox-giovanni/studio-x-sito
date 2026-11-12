@@ -256,7 +256,7 @@ window.SITO = {
             {
               "anni": "2023–2025",
               "testo": {
-                "it": "Erasmus e ricerca di tesi",
+                "it": "Erasmus e ricerca tesi",
                 "en": "Erasmus and thesis research"
               },
               "dove": {
@@ -283,20 +283,20 @@ window.SITO = {
             "en": "Experience"
           },
           "voci": [
-              {
-                "anni": {
-                  "it": "dal 2026",
-                  "en": "since 2026"
-                },
-                "testo": {
-                  "it": "Architetto",
-                  "en": "Architect"
-                },
-                "dove": {
-                  "it": "Supervoid, Roma",
-                  "en": "Supervoid, Rome"
-                }
+            {
+              "anni": {
+                "it": "dal 2026",
+                "en": "since 2026"
               },
+              "testo": {
+                "it": "Architetto",
+                "en": "Architect"
+              },
+              "dove": {
+                "it": "Supervoid, Roma",
+                "en": "Supervoid, Rome"
+              }
+            },
             {
               "anni": "2024–2025",
               "testo": {
@@ -328,28 +328,6 @@ window.SITO = {
               "dove": {
                 "it": "SDB architettura, Roma",
                 "en": "SDB architettura, Rome"
-              }
-            },
-            {
-              "anni": "2023",
-              "testo": {
-                "it": "Mostra personale di disegno Taccuini",
-                "en": "Solo drawing exhibition Taccuini"
-              },
-              "dove": {
-                "it": "Sinestetica Expo, Roma",
-                "en": "Sinestetica Expo, Rome"
-              }
-            },
-            {
-              "anni": "2022–2023",
-              "testo": {
-                "it": "Graphic designer",
-                "en": "Graphic designer"
-              },
-              "dove": {
-                "it": "E23 Startup, Roma",
-                "en": "E23 Startup, Rome"
               }
             }
           ]
