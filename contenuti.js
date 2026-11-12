@@ -34,8 +34,8 @@ window.SITO = {
       "id": "ghersi",
       "nome": "Alessandro Ghersi",
       "bio": {
-        "it": "Si è avvicinato all'architettura attraverso la scenografia artistica, da cui viene il suo interesse per le sequenze spaziali e i giochi di luce, a cui affianca l'attenzione per gli aspetti costruttivi. Si è laureato con lode alla Sapienza Università di Roma, con uno scambio all'Universitat Politècnica de València, ed è abilitato alla professione.",
-        "en": "He came to architecture through artistic set design, the source of his interest in spatial sequences and plays of light, alongside close attention to construction. He graduated with honours from Sapienza Università di Roma, with an exchange at Universitat Politècnica de València, and is qualified to practise."
+        "it": "Si è avvicinato all'architettura attraverso la scenografia artistica, da cui viene il suo interesse per le sequenze spaziali e i giochi di luce, a cui affianca l'attenzione per gli aspetti costruttivi. È abilitato alla professione.",
+        "en": "He came to architecture through artistic set design, the source of his interest in spatial sequences and plays of light, alongside close attention to construction. He is qualified to practise."
       },
       "cv": [
         {
@@ -129,8 +129,8 @@ window.SITO = {
       "id": "parroccini",
       "nome": "Pietro Parroccini",
       "bio": {
-        "it": "Si interessa ai processi di progetto, dalle nuove costruzioni alla riconversione di edifici dismessi attraverso il riuso adattivo, dalla composizione al dettaglio costruttivo, e lavora tra disegno a mano, modelli fisici e modellazione tridimensionale. Si è laureato con lode alla Sapienza Università di Roma, con un Erasmus all'Instituto Superior Técnico di Lisbona, ed è abilitato alla professione.",
-        "en": "He is interested in design processes, from new construction to the conversion of disused buildings through adaptive reuse, and from composition to construction detail, working across hand drawing, physical models and three-dimensional modelling. He graduated with honours from Sapienza Università di Roma, with an Erasmus at Instituto Superior Técnico in Lisbon, and is qualified to practise."
+        "it": "Si interessa ai processi di progetto, dalle nuove costruzioni alla riconversione di edifici dismessi attraverso il riuso adattivo, dalla composizione al dettaglio costruttivo. Predilige strumenti che permettono di guardare forme e spazi da punti di vista diversi: il disegno a mano, i modelli fisici, la modellazione tridimensionale. È abilitato alla professione.",
+        "en": "He is interested in design processes, from new construction to the conversion of disused buildings through adaptive reuse, and from composition to construction detail. He favours tools that let him look at form and space from different points of view: hand drawing, physical models, three-dimensional modelling. He is qualified to practise."
       },
       "cv": [
         {
@@ -232,8 +232,8 @@ window.SITO = {
       "id": "telve",
       "nome": "Giovanni Telve",
       "bio": {
-        "it": "Si interessa al modo in cui gli spazi urbani definiscono le relazioni sociali e dedica attenzione alla rappresentazione grafica e visuale del progetto. Ha studiato alla Sapienza Università di Roma, dove si è laureato con lode, alla TU Darmstadt nel 2022 e alla TU München nel 2025. È abilitato alla professione.",
-        "en": "He is interested in how urban spaces shape social relationships and pays close attention to the graphic and visual representation of a project. He studied at Sapienza Università di Roma, where he graduated with honours, at TU Darmstadt in 2022 and at TU München in 2025. He is qualified to practise."
+        "it": "Si interessa al rapporto tra spazio urbano e relazioni sociali. Il suo approccio parte dalla conoscenza del luogo e dà valore al contesto e alla sua identità; dedica attenzione alla rappresentazione grafica e visuale del progetto e sostiene processi di progettazione partecipativa, che ascoltino le diverse parti coinvolte. È abilitato alla professione.",
+        "en": "He is interested in the relationship between urban space and social relationships. His approach starts from an understanding of place and values context and its identity; he pays close attention to the graphic and visual representation of a project and supports participatory design processes that listen to everyone involved. He is qualified to practise."
       },
       "cv": [
         {
