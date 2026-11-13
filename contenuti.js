@@ -34,8 +34,8 @@ window.SITO = {
       "id": "ghersi",
       "nome": "Alessandro Ghersi",
       "bio": {
-        "it": "Si è avvicinato all'architettura attraverso la scenografia artistica, da cui viene il suo interesse per le sequenze spaziali e i giochi di luce, a cui affianca l'attenzione per gli aspetti costruttivi. È abilitato alla professione.",
-        "en": "He came to architecture through artistic set design, the source of his interest in spatial sequences and plays of light, alongside close attention to construction. He is qualified to practise."
+        "it": "Architetto che inizia il percorso verso la progettazione durante gli studi in Arti Figurative e Scenografia che lo avvicinano alla composizione dello spazio, alla costruzione di atmosfere e al rapporto tra forma, materia e percezione. Questa formazione contribuisce a definire un metodo di lavoro fondato sul disegno e sul pensiero visivo, intesi non soltanto come strumenti di rappresentazione, ma soprattutto come mezzi di indagine, attraverso cui esplorare relazioni, proporzioni e configurazioni spaziali alle diverse scale, dall'oggetto al paesaggio, con un approccio trasversale che mette in relazione ricerca, sensibilità compositiva e conoscenza tecnica. È abilitato alla professione.",
+        "en": "An architect whose path towards design begins with studies in Figurative Arts and Scenography, which bring him closer to the composition of space, the construction of atmospheres and the relationship between form, matter and perception. This background helps define a way of working founded on drawing and visual thinking, understood not only as tools of representation but above all as means of enquiry, through which to explore relationships, proportions and spatial configurations at different scales, from object to landscape, with a cross-disciplinary approach that connects research, compositional sensitivity and technical knowledge. He is qualified to practise."
       },
       "cv": [
         {
@@ -65,6 +65,17 @@ window.SITO = {
                 "it": "Universitat Politècnica de València",
                 "en": "Universitat Politècnica de València"
               }
+            },
+            {
+              "anni": "2024",
+              "testo": {
+                "it": "Borsa di studio internazionale",
+                "en": "International scholarship"
+              },
+              "dove": {
+                "it": "Academy of Architectural Culture, Amburgo",
+                "en": "Academy of Architectural Culture, Hamburg"
+              }
             }
           ]
         },
@@ -80,12 +91,12 @@ window.SITO = {
                 "en": "since 2026"
               },
               "testo": {
-                "it": "Architetto",
-                "en": "Architect"
+                "it": "Architetto paesaggista",
+                "en": "Landscape architect"
               },
               "dove": {
-                "it": "V.A.M.S. Ingegneria Srl, Roma",
-                "en": "V.A.M.S. Ingegneria Srl, Rome"
+                "it": "VAMS Ingegneria S.r.l., Roma",
+                "en": "VAMS Ingegneria S.r.l., Rome"
               }
             },
             {
@@ -102,23 +113,12 @@ window.SITO = {
             {
               "anni": "2025",
               "testo": {
-                "it": "Partecipante al workshop MEDS",
-                "en": "Participant, MEDS workshop"
+                "it": "Assistente alla didattica",
+                "en": "Teaching assistant"
               },
               "dove": {
-                "it": "",
-                "en": ""
-              }
-            },
-            {
-              "anni": "2024",
-              "testo": {
-                "it": "Borsa di progettazione",
-                "en": "Design scholarship"
-              },
-              "dove": {
-                "it": "Academy of Architectural Culture, Amburgo",
-                "en": "Academy of Architectural Culture, Hamburg"
+                "it": "Sapienza Università di Roma",
+                "en": "Sapienza Università di Roma"
               }
             }
           ]
