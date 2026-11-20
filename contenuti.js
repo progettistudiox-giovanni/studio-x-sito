@@ -129,8 +129,8 @@ window.SITO = {
       "id": "parroccini",
       "nome": "Pietro Parroccini",
       "bio": {
-        "it": "Si interessa ai processi di progetto, dalle nuove costruzioni alla riconversione di edifici dismessi attraverso il riuso adattivo, dalla composizione al dettaglio costruttivo. Predilige strumenti che permettono di guardare forme e spazi da punti di vista diversi: il disegno a mano, i modelli fisici, la modellazione tridimensionale. È abilitato alla professione.",
-        "en": "He is interested in design processes, from new construction to the conversion of disused buildings through adaptive reuse, and from composition to construction detail. He favours tools that let him look at form and space from different points of view: hand drawing, physical models, three-dimensional modelling. He is qualified to practise."
+        "it": "Si interessa ai processi di progetto, dalle nuove costruzioni alla riconversione di edifici dismessi attraverso il riuso adattivo, dalla composizione al dettaglio costruttivo. Predilige strumenti che permettono di guardare forme e spazi da punti di vista diversi: il disegno a mano, i modelli fisici, la modellazione tridimensionale.",
+        "en": "He is interested in design processes, from new construction to the conversion of disused buildings through adaptive reuse, and from composition to construction detail. He favours tools that let him look at form and space from different points of view: hand drawing, physical models, three-dimensional modelling."
       },
       "cv": [
         {
@@ -232,8 +232,8 @@ window.SITO = {
       "id": "telve",
       "nome": "Giovanni Telve",
       "bio": {
-        "it": "Si interessa al rapporto tra spazio urbano e relazioni sociali. Il suo approccio parte dalla conoscenza del luogo e dà valore al contesto e alla sua identità; dedica attenzione alla rappresentazione grafica e visuale del progetto e sostiene processi di progettazione partecipativa, che ascoltino le diverse parti coinvolte. È abilitato alla professione.",
-        "en": "He is interested in the relationship between urban space and social relationships. His approach starts from an understanding of place and values context and its identity; he pays close attention to the graphic and visual representation of a project and supports participatory design processes that listen to everyone involved. He is qualified to practise."
+        "it": "Si interessa al rapporto tra spazio urbano e relazioni sociali. Il suo approccio parte dalla conoscenza del luogo e dà valore al contesto e alla sua identità; dedica attenzione alla rappresentazione grafica e visuale del progetto e sostiene processi di progettazione partecipativa, che ascoltino le diverse parti coinvolte.",
+        "en": "He is interested in the relationship between urban space and social relationships. His approach starts from an understanding of place and values context and its identity; he pays close attention to the graphic and visual representation of a project and supports participatory design processes that listen to everyone involved."
       },
       "cv": [
         {
