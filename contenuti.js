@@ -56,17 +56,6 @@ window.SITO = {
               }
             },
             {
-              "anni": "2022–2023",
-              "testo": {
-                "it": "Erasmus",
-                "en": "Erasmus"
-              },
-              "dove": {
-                "it": "Universitat Politècnica de València",
-                "en": "Universitat Politècnica de València"
-              }
-            },
-            {
               "anni": "2024",
               "testo": {
                 "it": "Borsa di studio internazionale",
@@ -75,6 +64,17 @@ window.SITO = {
               "dove": {
                 "it": "Academy of Architectural Culture, Amburgo",
                 "en": "Academy of Architectural Culture, Hamburg"
+              }
+            },
+            {
+              "anni": "2022–2023",
+              "testo": {
+                "it": "Erasmus",
+                "en": "Erasmus"
+              },
+              "dove": {
+                "it": "Universitat Politècnica de València",
+                "en": "Universitat Politècnica de València"
               }
             }
           ]
@@ -151,6 +151,17 @@ window.SITO = {
               }
             },
             {
+              "anni": "2024",
+              "testo": {
+                "it": "Borsa di progettazione",
+                "en": "Design scholarship"
+              },
+              "dove": {
+                "it": "Academy of Architectural Culture, Amburgo",
+                "en": "Academy of Architectural Culture, Hamburg"
+              }
+            },
+            {
               "anni": "2022–2023",
               "testo": {
                 "it": "Erasmus",
@@ -189,17 +200,6 @@ window.SITO = {
               "dove": {
                 "it": "Sapienza Università di Roma",
                 "en": "Sapienza Università di Roma"
-              }
-            },
-            {
-              "anni": "2024",
-              "testo": {
-                "it": "Borsa di progettazione",
-                "en": "Design scholarship"
-              },
-              "dove": {
-                "it": "Academy of Architectural Culture, Amburgo",
-                "en": "Academy of Architectural Culture, Hamburg"
               }
             },
             {
